@@ -5,22 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Калькулятор дат</title>
+    <!-- <script src="./js/libs/howler.js"></script> -->
+    <!-- <script script > 
+    var  sound  =  new  Howl ({ 
+      src: [ './js/music/zvuk.mp3' ] 
+    }); 
+    </script> -->
     <script type="module" src="./js/main.js"></script>
+    <style>
+        .visible{
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <h2>Калькулятор дат</h2>
-    <form id="calcDate">
-        <label for="dateFrom">
-            Первая дата:
-            <input type="date" name="dateFrom" id="dateFrom">
-        </label>
-        <label for="dateTo">
-            Вторая дата:
-            <input type="date" name="dateTo" id="dateTo">
-        </label>
-        <button type="submit">Рассчитать промежуток</button>
-    </form>
-    <p id="output">
-    </p>
+    <div class="nav">
+        <button class="btn" data-name="calc">Калькулятор</button>
+        <button class="btn" data-name="timer">Таймер</button>
+    </div>
+    <div class="calc visible">
+        <h2>Калькулятор дат</h2>
+        <form id="calcDate">
+            <label for="dateFrom">
+                Первая дата:
+                <input type="date" name="dateFrom" id="dateFrom">
+            </label>
+            <br>
+            <br>
+            <label for="dateTo">
+                Вторая дата:
+                <input type="date" name="dateTo" id="dateTo">
+            </label>
+            <br>
+            <br>
+            <button type="submit">Рассчитать промежуток</button>
+        </form>
+        <p id="output">
+        </p>
+    </div>
+    <div class="timer visible">
+        <h2>Таймер</h2>
+        <h1><span class="timer-seconds">00</span></h1>
+        <input type="number" name="setTimer" id="setTimer" min="1" max="60" placeholder="секунды">  
+        <button class="btn-start">СТАРТ</button>
+        <button class="btn-stop">СТОП</button>
+        <p class="out-timer"></p>
+    </div>
 </body>
 </html>

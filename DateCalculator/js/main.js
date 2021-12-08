@@ -1,1 +1,1 @@
-import "./pages/dateCalc.js";
+import "./nav/getPages.js";
